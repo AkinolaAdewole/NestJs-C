@@ -1,4 +1,4 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get, Param, Post } from '@nestjs/common';
 
 @Controller('ninjas')
 export class NinjasController {
@@ -9,8 +9,14 @@ export class NinjasController {
     };
 
     // Get one by id
-    @Get(':id');
-    getOneNinja(){
-        return{}
+    @Get(':id')
+    getOneNinja(@Param('id') id: string) {
+        return {};
+    };
+
+    //POST
+    @Post()
+    createNinja(){
+        return { message:' post successfully '}
     }
 }
