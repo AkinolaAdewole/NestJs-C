@@ -11,7 +11,7 @@ export class NinjasController {
     // Get one by id
     @Get(':id')
     getOneNinja(@Param('id') id: string) {
-        return {message:' Get one successfully'};
+        return {message:' Get one successfully', id};
     };
 
     //POST
@@ -23,12 +23,12 @@ export class NinjasController {
     //PUT  /ninjas/:id
     @Put(':id')
     updateNinja(@Param('id') id:any){
-        return { message: 'update successfully'}
+        return { message: 'update successfully', id}
     };
 
     //Delete /ninjas/:id
     @Delete(':id')
     removeNinja(@Param('id') id:any){
-        return { message: 'delete successfully '}
+        return { message: 'delete successfully ', id}
     }
 }
